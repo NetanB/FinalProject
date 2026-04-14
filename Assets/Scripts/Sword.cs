@@ -10,6 +10,8 @@ public class Sword : MonoBehaviour
 
     private ActiveWeapon activeWeapon;
 
+    [SerializeField] private Transform weaponCollider;
+
 
    private void Awake()
     {
@@ -38,6 +40,12 @@ public class Sword : MonoBehaviour
     private void Attack()
     {
         myAnimator.SetTrigger("Attack");
+        weaponCollider.gameObject.SetActive(true);
+    }
+
+    public void DoneAttackingAnimEvent()
+    {
+        weaponCollider.gameObject.SetActive(false);
     }
 
     private void MouseFollowWithOffset()
@@ -49,11 +57,13 @@ public class Sword : MonoBehaviour
 
         if(mousePosition.x < playerScreenPosition.x)
         {
-            activeWeapon.transform.rotation = Quaternion.Euler(0f, -180f, angle);
+            activeWeapon.transform.rotation = Quaternion.Euler(0f, -180, angle);
+            weaponCollider.transform.rotation = Quaternion.Euler(0, -180, 0);
         }
         else
         {
-            activeWeapon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+            activeWeapon.transform.rotation = Quaternion.Euler(0, 0, angle);
+            weaponCollider.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 

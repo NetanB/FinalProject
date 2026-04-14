@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 185228700685072776}
   - component: {fileID: 1141331341892121619}
   - component: {fileID: 7728122677018813877}
+  - component: {fileID: 1957682405695290791}
   m_Layer: 0
   m_Name: BlueSlime
   m_TagString: Untagged
@@ -207,3 +208,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1957682405695290791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511270181050290701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b124b33289339a6469ae8e2da5d4a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
