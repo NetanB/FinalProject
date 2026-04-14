@@ -1031,6 +1031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueSlime (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6420536098101577911, guid: 1f0b8c4b3ac193248ba3271a9effcf75, type: 3}
+      propertyPath: knockBackTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 9113019833647110666, guid: 1f0b8c4b3ac193248ba3271a9effcf75, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.394032
@@ -1227,7 +1231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2006760139
 Transform:
   m_ObjectHideFlags: 0

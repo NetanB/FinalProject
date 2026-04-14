@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 2541932235909297602}
   - component: {fileID: 185228700685072776}
   - component: {fileID: 1141331341892121619}
+  - component: {fileID: 6420536098101577911}
   - component: {fileID: 7728122677018813877}
+  - component: {fileID: 7151290914902675954}
   - component: {fileID: 1957682405695290791}
   m_Layer: 0
   m_Name: BlueSlime
@@ -186,6 +188,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enem
   moveSpeed: 1
+--- !u!114 &6420536098101577911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511270181050290701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e5b9f3f127f0846850d019eb46278e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KnockBack
+  knockBackTime: 0.2
 --- !u!95 &7728122677018813877
 Animator:
   serializedVersion: 7
@@ -208,6 +223,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7151290914902675954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511270181050290701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f5a520d4fc10d429e6f548b5595712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Flash
+  restoreDefaultMatTime: 0.2
+  whiteFlashMat: {fileID: 2100000, guid: 214866682ffd84d4996c93eeabbec7cc, type: 2}
 --- !u!114 &1957682405695290791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,3 +249,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b124b33289339a6469ae8e2da5d4a118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  startingHealth: 3
+  deathVFXPrefab: {fileID: 1957382049784213557, guid: 8eace4d4271b7f54da71e057e86667ad, type: 3}

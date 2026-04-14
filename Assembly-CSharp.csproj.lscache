@@ -52,14 +52,19 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 /warnaserror+:NU1605
 
 [sourceFiles]
-Assets/Scripts/
- ActiveWeapon.cs
- DamageSource.cs
+Assets/Scripts/Enemies/
  EnemyAI.cs
  EnemyHealth.cs
  EnemyPathFInding.cs
+Assets/Scripts/Misc/
+ Flash.cs
+ KnockBack.cs
+Assets/Scripts/Player/
+ ActiveWeapon.cs
+ DamageSource.cs
  Player Controls.cs
  PlayerController.cs
+ SlashAnim.cs
  Sword.cs
 Temp/obj/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
 
