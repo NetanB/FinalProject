@@ -3,19 +3,21 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool FacingLeft {get {return FacingLeft; } set{FacingLeft = value; }   }
-    public static PlayerController Instance;
-      [SerializeField] private float speed = 1f;
+public bool FacingLeft {get {return FacingLeft; }}
+public static PlayerController Instance;
+[SerializeField] private float speed = 1f;
+[SerializeField] private float moveSpeed  = 1f;
 
-  private PlayerControls playerControls;
-  private Vector2 movement;
-  private Rigidbody2D rb; 
+private PlayerControls playerControls;
+private Vector2 movement;
+private Rigidbody2D rb; 
 
-  private Animator myAnimator;
+private Animator myAnimator;
 
-  private SpriteRenderer mySpriteRenderer;
+private SpriteRenderer mySpriteRenderer;
+private float startingMoveSpeed;
 
-  private bool facingLeft = false;
+private bool facingLeft = false;
 
     private void Awake()
     {
@@ -26,6 +28,10 @@ public class PlayerController : MonoBehaviour
         mySpriteRenderer = GetComponent<SpriteRenderer>();
 
     }  
+    private void Start()
+    {
+        startingMoveSpeed = moveSpeed;
+    }
 
     private void OnEnable()
     {
