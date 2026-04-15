@@ -1,10 +1,13 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
+using System.Collections.Generic;   
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
 public bool FacingLeft {get {return FacingLeft; }}
-public static PlayerController Instance;
+
 [SerializeField] private float speed = 1f;
 [SerializeField] private float moveSpeed  = 1f;
 
@@ -19,9 +22,9 @@ private float startingMoveSpeed;
 
 private bool facingLeft = false;
 
-    private void Awake()
-    {
-        Instance = this;
+    protected override void Awake(){
+        base.Awake();
+        //Instance = this;
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();

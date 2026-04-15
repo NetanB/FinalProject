@@ -53,13 +53,15 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 
 [sourceFiles]
 Assets/Scripts/
- ChestDrop.cs
- Destructible.cs
+ AreaEntrance.cs
+ AreaExit.cs
  Enemies/
   EnemyAI.cs
   EnemyHealth.cs
   EnemyPathFInding.cs
  Misc/
+  ChestDrop.cs
+  Destructible.cs
   Flash.cs
   KnockBack.cs
  Player/
@@ -69,6 +71,8 @@ Assets/Scripts/
   PlayerController.cs
   SlashAnim.cs
   Sword.cs
+ SceneManagement.cs
+ Singleton.cs
 Temp/obj/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
 
 [metadataReferences]
