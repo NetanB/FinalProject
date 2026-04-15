@@ -1,9 +1,8 @@
 using System;
 using System.Collections;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
-
-public class UiFade : Singleton<UIFade>
+using UnityEngine.UI;
+public class UIFade : Singleton<UIFade>
 {
     [SerializeField] private Image fadeScreen;
     [SerializeField] private float fadeSpeed = 1f;
@@ -21,4 +20,27 @@ public class UiFade : Singleton<UIFade>
         StartCoroutine(fadeRoutine);
     
     } 
+
+    public void FadeToClear()
+    {
+        if(fadeRoutine != null)
+        {
+            StopCoroutine(fadeRoutine);
+        }
+
+        fadeRoutine = FadeRoutine(0);
+        StartCoroutine(fadeRoutine);
+    
+    }
+
+    private IEnumerator FadeRoutine(float targetAlpha)
+    {
+        while (!Mathf.Approximately(fadeScreen.color.a, targetAlpha))
+        {
+            float newAlpha = Mathf.MoveTowards(fadeScreen.color.a, targetAlpha, fadeSpeed * Time.deltaTime);
+            fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, newAlpha);
+            yield return null;
+        }
+    }
+
 }
