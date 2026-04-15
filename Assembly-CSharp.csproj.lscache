@@ -55,6 +55,8 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 Assets/Scripts/
  AreaEntrance.cs
  AreaExit.cs
+ BaseSingleton.cs
+ CameraController.cs
  Enemies/
   EnemyAI.cs
   EnemyHealth.cs
@@ -73,6 +75,7 @@ Assets/Scripts/
   Sword.cs
  SceneManagement.cs
  Singleton.cs
+ UiFade.cs
 Temp/obj/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
 
 [metadataReferences]
