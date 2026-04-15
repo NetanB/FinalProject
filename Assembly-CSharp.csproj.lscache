@@ -52,20 +52,23 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 /warnaserror+:NU1605
 
 [sourceFiles]
-Assets/Scripts/Enemies/
- EnemyAI.cs
- EnemyHealth.cs
- EnemyPathFInding.cs
-Assets/Scripts/Misc/
- Flash.cs
- KnockBack.cs
-Assets/Scripts/Player/
- ActiveWeapon.cs
- DamageSource.cs
- Player Controls.cs
- PlayerController.cs
- SlashAnim.cs
- Sword.cs
+Assets/Scripts/
+ ChestDrop.cs
+ Destructible.cs
+ Enemies/
+  EnemyAI.cs
+  EnemyHealth.cs
+  EnemyPathFInding.cs
+ Misc/
+  Flash.cs
+  KnockBack.cs
+ Player/
+  ActiveWeapon.cs
+  DamageSource.cs
+  Player Controls.cs
+  PlayerController.cs
+  SlashAnim.cs
+  Sword.cs
 Temp/obj/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
 
 [metadataReferences]
@@ -361,6 +364,8 @@ Library/ScriptAssemblies/
  Unity.2D.Tooling.Editor.dll
  Unity.Burst.dll
  Unity.Burst.Editor.dll
+ Unity.Cinemachine.dll
+ Unity.Cinemachine.Editor.dll
  Unity.Collections.dll
  Unity.Collections.Editor.dll
  Unity.InputSystem.dll
@@ -394,7 +399,10 @@ Library/ScriptAssemblies/
  Unity.RenderPipelines.Universal.Shaders.dll
  Unity.Rider.Editor.dll
  Unity.Searcher.Editor.dll
+ Unity.Settings.Editor.dll
  Unity.ShaderGraph.Editor.dll
+ Unity.Splines.dll
+ Unity.Splines.Editor.dll
  Unity.SurfaceCache.Runtime.dll
  Unity.TextMeshPro.dll
  Unity.TextMeshPro.Editor.dll
