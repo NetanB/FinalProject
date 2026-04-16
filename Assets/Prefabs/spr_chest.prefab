@@ -172,3 +172,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ca3de09315afc498c122817ea01ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupSpawner
+  BookPrefab: {fileID: 7800123188160928733, guid: 8c6eab3db938b864f860b8abda36cc5e, type: 3}

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6335340382138478791}
   - component: {fileID: 6515493096003214839}
   - component: {fileID: 5268504280898172502}
+  - component: {fileID: 3062208492383440761}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -244,6 +245,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e51fafd10b22884889824fb905aeb87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomIdleAnimation
+--- !u!114 &3062208492383440761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4042538342463158135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ca3de09315afc498c122817ea01ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupSpawner
+  BookPrefab: {fileID: 7800123188160928733, guid: 8c6eab3db938b864f860b8abda36cc5e, type: 3}
 --- !u!1 &6273586858697214642
 GameObject:
   m_ObjectHideFlags: 0
