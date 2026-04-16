@@ -101,6 +101,56 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Inventory",
+            "id": "52456cf1-8d3b-45ba-b566-ae132bd72c64",
+            "actions": [
+                {
+                    "name": "Keyboard",
+                    "type": "Value",
+                    "id": "7cf642b0-b11e-4541-bf39-f230343cf382",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "02b06822-2e3f-4234-a1f4-ece959b644f3",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "Scale",
+                    "groups": "",
+                    "action": "Keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "52a10fee-fc83-4516-865b-a366048d32e0",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "Scale(factor=2)",
+                    "groups": "",
+                    "action": "Keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec3e3fdb-7421-444b-8f6d-8248ce918489",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "Scale(factor=3)",
+                    "groups": "",
+                    "action": "Keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

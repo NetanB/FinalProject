@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7728122677018813877}
   - component: {fileID: 7151290914902675954}
   - component: {fileID: 1957682405695290791}
+  - component: {fileID: -8129987253262022917}
   m_Layer: 0
   m_Name: BlueSlime
   m_TagString: Untagged
@@ -175,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c33da0a17d9e143aa22f224dea9e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  roamChangeDirectionFloat: 2
 --- !u!114 &1141331341892121619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,3 +253,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   startingHealth: 3
   deathVFXPrefab: {fileID: 1957382049784213557, guid: 8eace4d4271b7f54da71e057e86667ad, type: 3}
+  knockBackThrust: 15
+--- !u!114 &-8129987253262022917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511270181050290701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ca3de09315afc498c122817ea01ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupSpawner
+  BookPrefab: {fileID: 7800123188160928733, guid: 8c6eab3db938b864f860b8abda36cc5e, type: 3}

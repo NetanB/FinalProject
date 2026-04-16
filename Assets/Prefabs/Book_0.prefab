@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3175795297097651923}
   - component: {fileID: 5670744458167734581}
   - component: {fileID: 1331881095510232160}
+  - component: {fileID: 840630737653440899}
   m_Layer: 0
   m_Name: Book_0
   m_TagString: Untagged
@@ -123,7 +124,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -138,7 +139,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7800123188160928733}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -157,3 +158,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &840630737653440899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7800123188160928733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2266e25a6194ec24c9f2b553d2c0ff69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickup
+  pickUpDistance: 5
+  accelerationRate: 5
+  maxSpeed: 10
+  pickUpType: 0

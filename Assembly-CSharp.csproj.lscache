@@ -53,29 +53,39 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 
 [sourceFiles]
 Assets/Scripts/
+ ActiveInventory.cs
  AreaEntrance.cs
  AreaExit.cs
  BaseSingleton.cs
  CameraController.cs
+ EconomyManager.cs
  Enemies/
   EnemyAI.cs
   EnemyHealth.cs
   EnemyPathFInding.cs
+ InventorySlot.cs
+ IWeapon.cs
  Misc/
   ChestDrop.cs
   Destructible.cs
   Flash.cs
   KnockBack.cs
+ Pickup.cs
+ PickupByType.cs
+ PickupSpawner.cs
  Player/
   ActiveWeapon.cs
   DamageSource.cs
   Player Controls.cs
   PlayerController.cs
+  PlayerHealth.cs
   SlashAnim.cs
   Sword.cs
+ RandomIdleAnimation.cs
  SceneManagement.cs
  Singleton.cs
  UiFade.cs
+ WeaponInfo.cs
 Temp/obj/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
 
 [metadataReferences]

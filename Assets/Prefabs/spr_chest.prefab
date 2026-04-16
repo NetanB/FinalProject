@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -9025340260834842363}
   - component: {fileID: 894511084050489511}
   - component: {fileID: -8653433249368874432}
+  - component: {fileID: -8860820266614495592}
   m_Layer: 0
   m_Name: spr_chest
   m_TagString: Untagged
@@ -157,3 +158,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChestDrop
   itemDrop: {fileID: 7800123188160928733, guid: 8c6eab3db938b864f860b8abda36cc5e, type: 3}
+  force: 5
+  upwardBoost: 1.5
+--- !u!114 &-8860820266614495592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2574562966945896366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ca3de09315afc498c122817ea01ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupSpawner
+  BookPrefab: {fileID: 7800123188160928733, guid: 8c6eab3db938b864f860b8abda36cc5e, type: 3}
