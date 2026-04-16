@@ -2,44 +2,52 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
+    private enum PickUpType { Books }
+
     [SerializeField] private float pickUpDistance = 5f;
-    [SerializeField] private float accelartionRate = .2f;
-    [SerializeField] private float moveSpeed = 3f;
-    [SerializeField] private float heightY = 1.5f;
-    [SerializeField] private float popDuration = 1f;
+    [SerializeField] private float accelerationRate = 5f;
+    [SerializeField] private float maxSpeed = 10f;
 
-    
+    [SerializeField] private PickUpType pickUpType;
 
-
-        private Vector3 moveDir;
+    private Vector3 moveDir;
+    private float currentSpeed;
     private Rigidbody2D rb;
 
-     private void Awake() {
+    private void Awake() {
         rb = GetComponent<Rigidbody2D>();
     }
-
 
     private void Update() {
         Vector3 playerPos = PlayerController.Instance.transform.position;
 
         if (Vector3.Distance(transform.position, playerPos) < pickUpDistance) {
             moveDir = (playerPos - transform.position).normalized;
-            moveSpeed += accelartionRate;
+            currentSpeed = Mathf.Lerp(currentSpeed, maxSpeed, accelerationRate * Time.deltaTime);
         } else {
             moveDir = Vector3.zero;
-            moveSpeed = 0;
+            currentSpeed = 0f;
         }
     }
 
-        private void FixedUpdate() {
-        rb.linearVelocity = moveDir * moveSpeed * Time.deltaTime;
+    private void FixedUpdate() {
+        rb.linearVelocity = moveDir * currentSpeed;
     }
 
-    private void OnTriggerStay2D(Collider2D other) {
-        if (other.gameObject.GetComponent<PlayerController>()) {
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.GetComponent<PlayerController>() != null) {
+            DetectPickupType();
             Destroy(gameObject);
         }
     }
 
-
+    private void DetectPickupType() {
+        switch (pickUpType) {
+            case PickUpType.Books:
+                if (EconomyManager.Instance != null) {
+                    EconomyManager.Instance.UpdateCurrentBooks();
+                }
+                break;
+        }
+    }
 }
