@@ -10,10 +10,12 @@ public bool FacingLeft {get {return FacingLeft; }}
 
 [SerializeField] private float speed = 1f;
 [SerializeField] private float moveSpeed  = 1f;
+[SerializeField] private Transform weaponCollider;
 
 private PlayerControls playerControls;
 private Vector2 movement;
 private Rigidbody2D rb; 
+private KnockBack knockBack;
 
 private Animator myAnimator;
 
@@ -29,11 +31,13 @@ private bool facingLeft = false;
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        knockBack = GetComponent<KnockBack>();
 
     }  
     private void Start()
     {
         startingMoveSpeed = moveSpeed;
+        ActiveInventory.Instance.EquipStartingWeapon();
     }
 
     private void OnEnable()
@@ -51,18 +55,33 @@ private bool facingLeft = false;
         AdjustPlayerFacingDirection();
         Move();
     }
+    private void OnDisable() {
+        playerControls.Disable();
+    }
+    
+    public Transform GetWeaponCollider() {
+        return weaponCollider;
+    }
 
     private void PlayerInput()
     {
         movement = playerControls.Movement.Move.ReadValue<Vector2>();
+        myAnimator.SetFloat("moveX", movement.x);
+        myAnimator.SetFloat("moveY", movement.y); 
     }
 
     private void Move()
     {
+        /*
+        if(knockBack.GettingKnockedBack) {return;}    
+        
         Vector2 newPosition = rb.position + movement * speed * Time.fixedDeltaTime;
         rb.MovePosition(newPosition);
-        myAnimator.SetFloat("moveX", movement.x);
-        myAnimator.SetFloat("moveY", movement.y);
+        */
+        if (knockBack.GettingKnockedBack || PlayerHealth.Instance.isDead) { return; }
+
+        rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
+        
     }
 
     private void AdjustPlayerFacingDirection()
