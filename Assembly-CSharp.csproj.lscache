@@ -58,6 +58,7 @@ Assets/Scripts/
  AreaExit.cs
  BaseSingleton.cs
  CameraController.cs
+ EconomyManager.cs
  Enemies/
   EnemyAI.cs
   EnemyHealth.cs
@@ -69,6 +70,9 @@ Assets/Scripts/
   Destructible.cs
   Flash.cs
   KnockBack.cs
+ Pickup.cs
+ PickupByType.cs
+ PickupSpawner.cs
  Player/
   ActiveWeapon.cs
   DamageSource.cs
